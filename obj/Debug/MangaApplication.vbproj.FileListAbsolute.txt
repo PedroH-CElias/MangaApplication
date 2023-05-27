@@ -1,0 +1,15 @@
+C:\Teste Manga Tec\MangaApplication\MangaApplication\bin\Debug\MangaApplication.exe.config
+C:\Teste Manga Tec\MangaApplication\MangaApplication\bin\Debug\MangaApplication.exe
+C:\Teste Manga Tec\MangaApplication\MangaApplication\bin\Debug\MangaApplication.pdb
+C:\Teste Manga Tec\MangaApplication\MangaApplication\bin\Debug\MangaApplication.xml
+C:\Teste Manga Tec\MangaApplication\MangaApplication\obj\Debug\MangaApplication.vbprojResolveAssemblyReference.cache
+C:\Teste Manga Tec\MangaApplication\MangaApplication\obj\Debug\MangaApplication.Resources.resources
+C:\Teste Manga Tec\MangaApplication\MangaApplication\obj\Debug\MangaApplication.vbproj.GenerateResource.Cache
+C:\Teste Manga Tec\MangaApplication\MangaApplication\obj\Debug\MangaApplication.exe
+C:\Teste Manga Tec\MangaApplication\MangaApplication\obj\Debug\MangaApplication.xml
+C:\Teste Manga Tec\MangaApplication\MangaApplication\obj\Debug\MangaApplication.pdb
+C:\Teste Manga Tec\MangaApplication\MangaApplication\obj\Debug\MangaApplication.TelaPrincipal.resources
+C:\Teste Manga Tec\MangaApplication\MangaApplication\obj\Debug\MangaApplication.FormCadastro.resources
+C:\Teste Manga Tec\MangaApplication\MangaApplication\obj\Debug\MangaApplication.FormEditarSenha.resources
+C:\Teste Manga Tec\MangaApplication\MangaApplication\obj\Debug\MangaApplication.FormLogin.resources
+C:\Teste Manga Tec\MangaApplication\MangaApplication\obj\Debug\MangaApplication.TelaInicial.resources
