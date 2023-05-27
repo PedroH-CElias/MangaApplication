@@ -36,6 +36,7 @@ Partial Class FormLogin
         Me.LinkLabelCadastro = New System.Windows.Forms.LinkLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.MostrarSenha = New System.Windows.Forms.CheckBox()
         Me.Painel.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,7 +100,7 @@ Partial Class FormLogin
         Me.Login.BackColor = System.Drawing.Color.White
         Me.Login.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Login.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Login.Location = New System.Drawing.Point(159, 148)
+        Me.Login.Location = New System.Drawing.Point(299, 153)
         Me.Login.Name = "Login"
         Me.Login.Size = New System.Drawing.Size(155, 30)
         Me.Login.TabIndex = 0
@@ -129,6 +130,7 @@ Partial Class FormLogin
         '
         Me.Painel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Painel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Painel.Controls.Add(Me.MostrarSenha)
         Me.Painel.Controls.Add(Me.Fechar)
         Me.Painel.Controls.Add(Me.LinkLabel2)
         Me.Painel.Controls.Add(Me.LinkLabelCadastro)
@@ -200,6 +202,16 @@ Partial Class FormLogin
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'MostrarSenha
+        '
+        Me.MostrarSenha.AutoSize = True
+        Me.MostrarSenha.Location = New System.Drawing.Point(48, 163)
+        Me.MostrarSenha.Name = "MostrarSenha"
+        Me.MostrarSenha.Size = New System.Drawing.Size(112, 20)
+        Me.MostrarSenha.TabIndex = 12
+        Me.MostrarSenha.Text = "Mostrar senha"
+        Me.MostrarSenha.UseVisualStyleBackColor = True
+        '
         'FormLogin
         '
         Me.AccessibleName = ""
@@ -239,4 +251,5 @@ Partial Class FormLogin
     Friend WithEvents LinkLabelCadastro As LinkLabel
     Friend WithEvents LinkLabel2 As LinkLabel
     Friend WithEvents Fechar As Button
+    Friend WithEvents MostrarSenha As CheckBox
 End Class

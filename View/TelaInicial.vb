@@ -6,9 +6,6 @@ Public Class TelaInicial
         Status.Text = "Conectando..."
         Dispose()
         FormLogin.Show()
-
-
     End Sub
-
 
 End Class

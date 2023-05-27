@@ -58,4 +58,14 @@ Public Class FormCadastro
         Dispose()
         FormLogin.ShowDialog()
     End Sub
+
+    Private Sub MostrarSenha_CheckedChanged(sender As Object, e As EventArgs) Handles MostrarSenha.CheckedChanged
+
+        If MostrarSenha.Checked Then
+            TextSenha.PasswordChar = ""
+        Else
+            TextSenha.PasswordChar = "*"
+        End If
+
+    End Sub
 End Class

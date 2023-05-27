@@ -7,4 +7,6 @@
 
     Public ReadOnly strCon = $"Data Source={server}; Integrated Security=true;Initial Catalog={dataBase};user ID={user};Password={password}"
 
+
+    Public email As String
 End Module

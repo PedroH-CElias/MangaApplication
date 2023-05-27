@@ -1,9 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class FormLogin
-    Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub Login_Click(sender As Object, e As EventArgs) Handles Login.Click
         RealizarLogin()
@@ -59,4 +56,12 @@ Public Class FormLogin
         End If
     End Sub
 
+    Private Sub MostrarSenha_CheckedChanged(sender As Object, e As EventArgs) Handles MostrarSenha.CheckedChanged
+
+        If MostrarSenha.Checked Then
+            TextSenha.PasswordChar = ""
+        Else
+            TextSenha.PasswordChar = "*"
+        End If
+    End Sub
 End Class

@@ -24,6 +24,7 @@ Partial Class FormCadastro
     Private Sub InitializeComponent()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Painel = New System.Windows.Forms.Panel()
+        Me.Voltar = New System.Windows.Forms.Button()
         Me.Cadastro = New System.Windows.Forms.Button()
         Me.TextUsuario = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -33,7 +34,7 @@ Partial Class FormCadastro
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Voltar = New System.Windows.Forms.Button()
+        Me.MostrarSenha = New System.Windows.Forms.CheckBox()
         Me.Painel.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,6 +52,7 @@ Partial Class FormCadastro
         '
         Me.Painel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Painel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Painel.Controls.Add(Me.MostrarSenha)
         Me.Painel.Controls.Add(Me.Voltar)
         Me.Painel.Controls.Add(Me.Cadastro)
         Me.Painel.Controls.Add(Me.TextUsuario)
@@ -65,12 +67,24 @@ Partial Class FormCadastro
         Me.Painel.Size = New System.Drawing.Size(472, 300)
         Me.Painel.TabIndex = 13
         '
+        'Voltar
+        '
+        Me.Voltar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Voltar.BackColor = System.Drawing.Color.White
+        Me.Voltar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Voltar.Location = New System.Drawing.Point(159, 248)
+        Me.Voltar.Name = "Voltar"
+        Me.Voltar.Size = New System.Drawing.Size(155, 27)
+        Me.Voltar.TabIndex = 15
+        Me.Voltar.Text = "Voltar"
+        Me.Voltar.UseVisualStyleBackColor = False
+        '
         'Cadastro
         '
         Me.Cadastro.BackColor = System.Drawing.Color.White
         Me.Cadastro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cadastro.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Cadastro.Location = New System.Drawing.Point(159, 157)
+        Me.Cadastro.Location = New System.Drawing.Point(159, 203)
         Me.Cadastro.Name = "Cadastro"
         Me.Cadastro.Size = New System.Drawing.Size(155, 30)
         Me.Cadastro.TabIndex = 0
@@ -162,17 +176,15 @@ Partial Class FormCadastro
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
-        'Voltar
+        'MostrarSenha
         '
-        Me.Voltar.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Voltar.BackColor = System.Drawing.Color.White
-        Me.Voltar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Voltar.Location = New System.Drawing.Point(159, 204)
-        Me.Voltar.Name = "Voltar"
-        Me.Voltar.Size = New System.Drawing.Size(155, 27)
-        Me.Voltar.TabIndex = 15
-        Me.Voltar.Text = "Voltar"
-        Me.Voltar.UseVisualStyleBackColor = False
+        Me.MostrarSenha.AutoSize = True
+        Me.MostrarSenha.Location = New System.Drawing.Point(46, 156)
+        Me.MostrarSenha.Name = "MostrarSenha"
+        Me.MostrarSenha.Size = New System.Drawing.Size(112, 20)
+        Me.MostrarSenha.TabIndex = 16
+        Me.MostrarSenha.Text = "Mostrar senha"
+        Me.MostrarSenha.UseVisualStyleBackColor = True
         '
         'FormCadastro
         '
@@ -210,4 +222,5 @@ Partial Class FormCadastro
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Voltar As Button
+    Friend WithEvents MostrarSenha As CheckBox
 End Class

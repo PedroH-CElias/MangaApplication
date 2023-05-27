@@ -24,16 +24,21 @@ Partial Class FormEditarSenha
     Private Sub InitializeComponent()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Painel = New System.Windows.Forms.Panel()
+        Me.Voltar = New System.Windows.Forms.Button()
         Me.Salvar = New System.Windows.Forms.Button()
-        Me.TextLogin = New System.Windows.Forms.TextBox()
+        Me.TextSenhaAtual = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextSenha = New System.Windows.Forms.TextBox()
+        Me.TextNovaSenha = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Voltar = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextConfirmarSenha = New System.Windows.Forms.TextBox()
+        Me.TextUsuario = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.MostrarSenha = New System.Windows.Forms.CheckBox()
         Me.Painel.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,12 +56,17 @@ Partial Class FormEditarSenha
         '
         Me.Painel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Painel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Painel.Controls.Add(Me.MostrarSenha)
+        Me.Painel.Controls.Add(Me.TextUsuario)
+        Me.Painel.Controls.Add(Me.Label6)
+        Me.Painel.Controls.Add(Me.TextConfirmarSenha)
+        Me.Painel.Controls.Add(Me.Label5)
         Me.Painel.Controls.Add(Me.Voltar)
         Me.Painel.Controls.Add(Me.Salvar)
-        Me.Painel.Controls.Add(Me.TextLogin)
+        Me.Painel.Controls.Add(Me.TextSenhaAtual)
         Me.Painel.Controls.Add(Me.Label2)
         Me.Painel.Controls.Add(Me.Label1)
-        Me.Painel.Controls.Add(Me.TextSenha)
+        Me.Painel.Controls.Add(Me.TextNovaSenha)
         Me.Painel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Painel.ForeColor = System.Drawing.Color.DarkGoldenrod
         Me.Painel.ImeMode = System.Windows.Forms.ImeMode.NoControl
@@ -65,32 +75,45 @@ Partial Class FormEditarSenha
         Me.Painel.Size = New System.Drawing.Size(472, 300)
         Me.Painel.TabIndex = 17
         '
+        'Voltar
+        '
+        Me.Voltar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Voltar.BackColor = System.Drawing.Color.White
+        Me.Voltar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Voltar.Location = New System.Drawing.Point(46, 260)
+        Me.Voltar.Name = "Voltar"
+        Me.Voltar.Size = New System.Drawing.Size(155, 27)
+        Me.Voltar.TabIndex = 16
+        Me.Voltar.Text = "Voltar"
+        Me.Voltar.UseVisualStyleBackColor = False
+        '
         'Salvar
         '
         Me.Salvar.BackColor = System.Drawing.Color.White
         Me.Salvar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Salvar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Salvar.Location = New System.Drawing.Point(159, 158)
+        Me.Salvar.Location = New System.Drawing.Point(299, 257)
         Me.Salvar.Name = "Salvar"
         Me.Salvar.Size = New System.Drawing.Size(155, 30)
         Me.Salvar.TabIndex = 0
         Me.Salvar.Text = "Salvar"
         Me.Salvar.UseVisualStyleBackColor = False
         '
-        'TextLogin
+        'TextSenhaAtual
         '
-        Me.TextLogin.Location = New System.Drawing.Point(46, 57)
-        Me.TextLogin.MaxLength = 50
-        Me.TextLogin.Name = "TextLogin"
-        Me.TextLogin.Size = New System.Drawing.Size(408, 22)
-        Me.TextLogin.TabIndex = 1
+        Me.TextSenhaAtual.Location = New System.Drawing.Point(46, 81)
+        Me.TextSenhaAtual.MaxLength = 50
+        Me.TextSenhaAtual.Name = "TextSenhaAtual"
+        Me.TextSenhaAtual.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextSenhaAtual.Size = New System.Drawing.Size(408, 22)
+        Me.TextSenhaAtual.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(43, 96)
+        Me.Label2.Location = New System.Drawing.Point(43, 121)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 13)
         Me.Label2.TabIndex = 5
@@ -101,20 +124,20 @@ Partial Class FormEditarSenha
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(43, 41)
+        Me.Label1.Location = New System.Drawing.Point(43, 65)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 13)
+        Me.Label1.Size = New System.Drawing.Size(79, 13)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Usuário (E-mail):"
+        Me.Label1.Text = "Senha atual:"
         '
-        'TextSenha
+        'TextNovaSenha
         '
-        Me.TextSenha.Location = New System.Drawing.Point(46, 112)
-        Me.TextSenha.MaxLength = 50
-        Me.TextSenha.Name = "TextSenha"
-        Me.TextSenha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextSenha.Size = New System.Drawing.Size(408, 22)
-        Me.TextSenha.TabIndex = 2
+        Me.TextNovaSenha.Location = New System.Drawing.Point(46, 137)
+        Me.TextNovaSenha.MaxLength = 50
+        Me.TextNovaSenha.Name = "TextNovaSenha"
+        Me.TextNovaSenha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextNovaSenha.Size = New System.Drawing.Size(408, 22)
+        Me.TextNovaSenha.TabIndex = 2
         '
         'Panel1
         '
@@ -162,17 +185,54 @@ Partial Class FormEditarSenha
         Me.PictureBox1.TabIndex = 16
         Me.PictureBox1.TabStop = False
         '
-        'Voltar
+        'Label5
         '
-        Me.Voltar.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Voltar.BackColor = System.Drawing.Color.White
-        Me.Voltar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Voltar.Location = New System.Drawing.Point(159, 206)
-        Me.Voltar.Name = "Voltar"
-        Me.Voltar.Size = New System.Drawing.Size(155, 27)
-        Me.Voltar.TabIndex = 16
-        Me.Voltar.Text = "Voltar"
-        Me.Voltar.UseVisualStyleBackColor = False
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(43, 175)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(102, 13)
+        Me.Label5.TabIndex = 17
+        Me.Label5.Text = "Confirmar senha:"
+        '
+        'TextConfirmarSenha
+        '
+        Me.TextConfirmarSenha.Location = New System.Drawing.Point(46, 191)
+        Me.TextConfirmarSenha.MaxLength = 50
+        Me.TextConfirmarSenha.Name = "TextConfirmarSenha"
+        Me.TextConfirmarSenha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextConfirmarSenha.Size = New System.Drawing.Size(408, 22)
+        Me.TextConfirmarSenha.TabIndex = 18
+        '
+        'TextUsuario
+        '
+        Me.TextUsuario.Location = New System.Drawing.Point(46, 25)
+        Me.TextUsuario.MaxLength = 50
+        Me.TextUsuario.Name = "TextUsuario"
+        Me.TextUsuario.Size = New System.Drawing.Size(408, 22)
+        Me.TextUsuario.TabIndex = 19
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(43, 9)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(100, 13)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "Usuário (E-mail):"
+        '
+        'MostrarSenha
+        '
+        Me.MostrarSenha.AutoSize = True
+        Me.MostrarSenha.Location = New System.Drawing.Point(46, 219)
+        Me.MostrarSenha.Name = "MostrarSenha"
+        Me.MostrarSenha.Size = New System.Drawing.Size(112, 20)
+        Me.MostrarSenha.TabIndex = 21
+        Me.MostrarSenha.Text = "Mostrar senha"
+        Me.MostrarSenha.UseVisualStyleBackColor = True
         '
         'FormEditarSenha
         '
@@ -202,12 +262,17 @@ Partial Class FormEditarSenha
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Painel As Panel
     Friend WithEvents Salvar As Button
-    Friend WithEvents TextLogin As TextBox
+    Friend WithEvents TextSenhaAtual As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextSenha As TextBox
+    Friend WithEvents TextNovaSenha As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Voltar As Button
+    Friend WithEvents TextConfirmarSenha As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TextUsuario As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents MostrarSenha As CheckBox
 End Class
