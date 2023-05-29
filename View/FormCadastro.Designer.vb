@@ -24,17 +24,25 @@ Partial Class FormCadastro
     Private Sub InitializeComponent()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Painel = New System.Windows.Forms.Panel()
+        Me.MaskedCPF = New System.Windows.Forms.MaskedTextBox()
+        Me.TextProfissao = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextIdade = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Voltar = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextNome = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.MostrarSenha = New System.Windows.Forms.CheckBox()
         Me.Cadastro = New System.Windows.Forms.Button()
-        Me.TextUsuario = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.TextSenha = New System.Windows.Forms.TextBox()
+        Me.TextUsuario = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.MostrarSenha = New System.Windows.Forms.CheckBox()
         Me.Painel.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,12 +60,20 @@ Partial Class FormCadastro
         '
         Me.Painel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Painel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Painel.Controls.Add(Me.MostrarSenha)
-        Me.Painel.Controls.Add(Me.Voltar)
-        Me.Painel.Controls.Add(Me.Cadastro)
-        Me.Painel.Controls.Add(Me.TextUsuario)
-        Me.Painel.Controls.Add(Me.Label2)
+        Me.Painel.Controls.Add(Me.MaskedCPF)
+        Me.Painel.Controls.Add(Me.TextProfissao)
         Me.Painel.Controls.Add(Me.Label1)
+        Me.Painel.Controls.Add(Me.Label8)
+        Me.Painel.Controls.Add(Me.TextUsuario)
+        Me.Painel.Controls.Add(Me.TextIdade)
+        Me.Painel.Controls.Add(Me.Label7)
+        Me.Painel.Controls.Add(Me.Voltar)
+        Me.Painel.Controls.Add(Me.Label6)
+        Me.Painel.Controls.Add(Me.TextNome)
+        Me.Painel.Controls.Add(Me.Label5)
+        Me.Painel.Controls.Add(Me.MostrarSenha)
+        Me.Painel.Controls.Add(Me.Cadastro)
+        Me.Painel.Controls.Add(Me.Label2)
         Me.Painel.Controls.Add(Me.TextSenha)
         Me.Painel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Painel.ForeColor = System.Drawing.Color.DarkGoldenrod
@@ -67,68 +83,155 @@ Partial Class FormCadastro
         Me.Painel.Size = New System.Drawing.Size(472, 300)
         Me.Painel.TabIndex = 13
         '
+        'MaskedCPF
+        '
+        Me.MaskedCPF.Location = New System.Drawing.Point(85, 69)
+        Me.MaskedCPF.Mask = "000.000.000-00"
+        Me.MaskedCPF.Name = "MaskedCPF"
+        Me.MaskedCPF.Size = New System.Drawing.Size(110, 22)
+        Me.MaskedCPF.TabIndex = 25
+        Me.MaskedCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
+        '
+        'TextProfissao
+        '
+        Me.TextProfissao.Location = New System.Drawing.Point(46, 124)
+        Me.TextProfissao.MaxLength = 50
+        Me.TextProfissao.Name = "TextProfissao"
+        Me.TextProfissao.Size = New System.Drawing.Size(408, 22)
+        Me.TextProfissao.TabIndex = 23
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(43, 108)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(63, 13)
+        Me.Label8.TabIndex = 24
+        Me.Label8.Text = "Profissão:"
+        '
+        'TextIdade
+        '
+        Me.TextIdade.Location = New System.Drawing.Point(323, 69)
+        Me.TextIdade.MaxLength = 50
+        Me.TextIdade.Name = "TextIdade"
+        Me.TextIdade.Size = New System.Drawing.Size(131, 22)
+        Me.TextIdade.TabIndex = 21
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(274, 74)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(43, 13)
+        Me.Label7.TabIndex = 22
+        Me.Label7.Text = "Idade:"
+        '
         'Voltar
         '
         Me.Voltar.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Voltar.BackColor = System.Drawing.Color.White
         Me.Voltar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Voltar.Location = New System.Drawing.Point(159, 248)
+        Me.Voltar.Location = New System.Drawing.Point(168, 270)
         Me.Voltar.Name = "Voltar"
-        Me.Voltar.Size = New System.Drawing.Size(155, 27)
+        Me.Voltar.Size = New System.Drawing.Size(140, 27)
         Me.Voltar.TabIndex = 15
         Me.Voltar.Text = "Voltar"
         Me.Voltar.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(45, 74)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(34, 13)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "CPF:"
+        '
+        'TextNome
+        '
+        Me.TextNome.Location = New System.Drawing.Point(46, 28)
+        Me.TextNome.MaxLength = 50
+        Me.TextNome.Name = "TextNome"
+        Me.TextNome.Size = New System.Drawing.Size(408, 22)
+        Me.TextNome.TabIndex = 17
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(43, 12)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(43, 13)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "Nome:"
+        '
+        'MostrarSenha
+        '
+        Me.MostrarSenha.AutoSize = True
+        Me.MostrarSenha.Location = New System.Drawing.Point(35, 274)
+        Me.MostrarSenha.Name = "MostrarSenha"
+        Me.MostrarSenha.Size = New System.Drawing.Size(112, 20)
+        Me.MostrarSenha.TabIndex = 16
+        Me.MostrarSenha.Text = "Mostrar senha"
+        Me.MostrarSenha.UseVisualStyleBackColor = True
         '
         'Cadastro
         '
         Me.Cadastro.BackColor = System.Drawing.Color.White
         Me.Cadastro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cadastro.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Cadastro.Location = New System.Drawing.Point(159, 203)
+        Me.Cadastro.Location = New System.Drawing.Point(314, 270)
         Me.Cadastro.Name = "Cadastro"
-        Me.Cadastro.Size = New System.Drawing.Size(155, 30)
+        Me.Cadastro.Size = New System.Drawing.Size(140, 27)
         Me.Cadastro.TabIndex = 0
         Me.Cadastro.Text = "Cadastrar"
         Me.Cadastro.UseVisualStyleBackColor = False
-        '
-        'TextUsuario
-        '
-        Me.TextUsuario.Location = New System.Drawing.Point(46, 57)
-        Me.TextUsuario.MaxLength = 50
-        Me.TextUsuario.Name = "TextUsuario"
-        Me.TextUsuario.Size = New System.Drawing.Size(408, 22)
-        Me.TextUsuario.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(43, 96)
+        Me.Label2.Location = New System.Drawing.Point(43, 214)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 13)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Senha:"
+        '
+        'TextSenha
+        '
+        Me.TextSenha.Location = New System.Drawing.Point(46, 230)
+        Me.TextSenha.MaxLength = 50
+        Me.TextSenha.Name = "TextSenha"
+        Me.TextSenha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextSenha.Size = New System.Drawing.Size(408, 22)
+        Me.TextSenha.TabIndex = 2
+        '
+        'TextUsuario
+        '
+        Me.TextUsuario.Location = New System.Drawing.Point(48, 178)
+        Me.TextUsuario.MaxLength = 50
+        Me.TextUsuario.Name = "TextUsuario"
+        Me.TextUsuario.Size = New System.Drawing.Size(408, 22)
+        Me.TextUsuario.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(43, 41)
+        Me.Label1.Location = New System.Drawing.Point(45, 162)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(100, 13)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Usuário (E-mail):"
-        '
-        'TextSenha
-        '
-        Me.TextSenha.Location = New System.Drawing.Point(46, 112)
-        Me.TextSenha.MaxLength = 50
-        Me.TextSenha.Name = "TextSenha"
-        Me.TextSenha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextSenha.Size = New System.Drawing.Size(408, 22)
-        Me.TextSenha.TabIndex = 2
         '
         'Panel1
         '
@@ -147,7 +250,7 @@ Partial Class FormCadastro
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 107)
+        Me.Label4.Location = New System.Drawing.Point(3, 111)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(270, 50)
         Me.Label4.TabIndex = 9
@@ -175,16 +278,6 @@ Partial Class FormCadastro
         Me.PictureBox1.Size = New System.Drawing.Size(309, 505)
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
-        '
-        'MostrarSenha
-        '
-        Me.MostrarSenha.AutoSize = True
-        Me.MostrarSenha.Location = New System.Drawing.Point(46, 156)
-        Me.MostrarSenha.Name = "MostrarSenha"
-        Me.MostrarSenha.Size = New System.Drawing.Size(112, 20)
-        Me.MostrarSenha.TabIndex = 16
-        Me.MostrarSenha.Text = "Mostrar senha"
-        Me.MostrarSenha.UseVisualStyleBackColor = True
         '
         'FormCadastro
         '
@@ -223,4 +316,12 @@ Partial Class FormCadastro
     Friend WithEvents Label3 As Label
     Friend WithEvents Voltar As Button
     Friend WithEvents MostrarSenha As CheckBox
+    Friend WithEvents TextProfissao As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextIdade As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TextNome As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents MaskedCPF As MaskedTextBox
 End Class
