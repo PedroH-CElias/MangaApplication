@@ -26,24 +26,24 @@ Public Class FormLogin
         Try
             Using cn = New SqlConnection(strCon)
                 cn.Open()
+                Dim sql = "SELECT email, senha FROM Usuario WHERE email=@Email AND senha=@Senha"
 
-                Using cmd = New SqlCommand("SELECT email, senha FROM 
-                                           Usuario WHERE email=@Email AND senha=@Senha", cn)
+                Using cmd = New SqlCommand(sql, cn)
 
-                    cmd.Parameters.AddWithValue("@Email", TextUsuario.Text)
-                    cmd.Parameters.AddWithValue("@Senha", TextSenha.Text)
+                        cmd.Parameters.AddWithValue("@Email", TextUsuario.Text)
+                        cmd.Parameters.AddWithValue("@Senha", TextSenha.Text)
 
-                    Using dr = cmd.ExecuteReader()
-                        If dr.HasRows Then
-                            If dr.Read() Then
-                                If dr("senha") = TextSenha.Text And dr("email") = TextUsuario.Text Then
-                                    AcessoPermitido = True
+                        Using dr = cmd.ExecuteReader()
+                            If dr.HasRows Then
+                                If dr.Read() Then
+                                    If dr("senha") = TextSenha.Text And dr("email") = TextUsuario.Text Then
+                                        AcessoPermitido = True
+                                    End If
                                 End If
                             End If
-                        End If
+                        End Using
                     End Using
                 End Using
-            End Using
         Catch ex As Exception
             MsgBox("Falha ao conectar!")
         End Try

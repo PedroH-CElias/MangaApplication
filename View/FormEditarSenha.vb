@@ -18,7 +18,7 @@ Public Class FormEditarSenha
     End Sub
 
     Private Sub SalvarNovaSenha()
-        Dim sql = ("UPDATE Usuario SET senha=@Senha WHERE email=@Email")
+        Dim sql = "UPDATE Usuario SET senha=@Senha WHERE email=@Email"
 
         Try
             Using cn = New SqlConnection(strCon)

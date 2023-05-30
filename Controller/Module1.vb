@@ -1,7 +1,7 @@
 ﻿Module Module1
 
     Private server = "DESKTOP-CSTV6N9" 'Alterar de acordo com o servidor local
-    Private dataBase = "MangaTec"
+    Private dataBase = "MangaTec" 'Alterar de acordo com o nome do banco de dados
     Private user = ""
     Private password = ""
 
